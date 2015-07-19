@@ -1,0 +1,22 @@
+ <!-- <form ng-submit="login()">
+     <input type="text" ng-model="email" />
+     <input type="text" required ng-model="password">
+      <button type="submit" class="md-raised md-primary">Login</button>
+      <button ng-click="register()" class="md-raised md-primary">Register</button>
+ </form>
+ <div class="container"> -->
+<ng-include src="'views/header.html'"></ng-include>
+ <!-- Modal Structure -->
+ <div id="modal1" class="modal" style="width: 350px;">
+     <form ng-submit="login()">
+   <div class="modal-content">
+           <input placeholder="Email" type="text" ng-model="email" />
+           <input placeholder="Password" type="text" required ng-model="password">
+   </div>
+   <div class="modal-footer">
+     <a href="#!" ng-click="login()" class=" modal-action modal-close waves-effect waves-green btn-flat">Login</a>
+     <!-- <button type="submit" class="md-raised md-primary">Login</button> -->
+     <!-- <button ng-click="register()" class="md-raised md-primary">Register</button> -->
+   </div>
+   </form>
+ </div>

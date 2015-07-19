@@ -1,0 +1,81 @@
+<!-- Modal Structure -->
+<div id="add-meal" class="modal modal-fixed-footer">
+  <div class="modal-content">
+    <h5>{{ selectedMeal.label || 'Choose your meal' }}</h5>
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="search-meal" ng-change="doSearch(searchMeal)" type="text" ng-model="searchMeal"  style="margin: 0">
+            <label for="search-meal">Search</label>
+            <ul class="collection" ng-show="searchMeal" style="margin: 0">
+                <li class="collection-item" ng-click="chooseMeal(searchMeal)">Alvin
+                    <span class="badge" style="right: 34.5%;">200</span>
+                    <span class="badge" style="right: 24%; color: blue;">25</span>
+                    <span class="badge" style="right: 13.5%; color: orange;">25</span>
+                    <span class="badge" style="right: 3.5%; color: green;">30</span>
+                </li>
+                <li class="collection-item">Alvin
+                    <span class="badge" style="right: 34.5%;">200</span>
+                    <span class="badge" style="right: 24%; color: blue;">25</span>
+                    <span class="badge" style="right: 13.5%; color: orange;">25</span>
+                    <span class="badge" style="right: 3.5%; color: green;">30</span>
+                </li>
+                <li class="collection-item">Alvin
+                    <span class="badge" style="right: 34.5%;">200</span>
+                    <span class="badge" style="right: 24%; color: blue;">25</span>
+                    <span class="badge" style="right: 13.5%; color: orange;">25</span>
+                    <span class="badge" style="right: 3.5%; color: green;">30</span>
+                </li>
+            </ul>
+            <ul class="collection" ng-hide="searchMeal || selectedMeal">
+                <li class="collection-item ative"><b>Yoy might choose:</b></li>
+                <li class="collection-item" ng-click="chooseMeal()">Alvin
+                    <span class="badge" style="right: 34.5%;">200</span>
+                    <span class="badge" style="right: 24%; color: blue;">25</span>
+                    <span class="badge" style="right: 13.5%; color: orange;">25</span>
+                    <span class="badge" style="right: 3.5%; color: green;">30</span>
+                </li>
+                <li class="collection-item">Alvin
+                    <span class="badge" style="right: 34.5%;">200</span>
+                    <span class="badge" style="right: 24%; color: blue;">25</span>
+                    <span class="badge" style="right: 13.5%; color: orange;">25</span>
+                    <span class="badge" style="right: 3.5%; color: green;">30</span>
+                </li>
+                <li class="collection-item">Alvin
+                    <span class="badge" style="right: 34.5%;">200</span>
+                    <span class="badge" style="right: 24%; color: blue;">25</span>
+                    <span class="badge" style="right: 13.5%; color: orange;">25</span>
+                    <span class="badge" style="right: 3.5%; color: green;">30</span>
+                </li>
+            </ul>
+            <div id="selected-meal" ng-show="selectedMeal" style="margin-top: 30px;">
+                <div class="row">
+                    <div class="col s2">Milk</div>
+                    <div class="col s2">
+                        <input style="width: 33px; height: 22px; margin: 0" type="text" name="name" value="200">
+                        <span style="position: absolute;">ml</span>
+                    </div>
+                    <div class="col s2">300</div>
+                    <div class="col s2">50</div>
+                    <div class="col s2">50</div>
+                    <div class="col s2">50</div>
+                </div>
+                <div class="row">
+                    <div class="col s2">Cereals</div>
+                    <div class="col s2">
+                        <input style="width: 33px; height: 22px; margin: 0" type="text" name="name" value="150">
+                        <span style="position: absolute;">g</span>
+                    </div>
+                    <div class="col s2">300</div>
+                    <div class="col s2">50</div>
+                    <div class="col s2">50</div>
+                    <div class="col s2">50</div>
+                </div>
+            </div>
+        </div>
+      </div>
+  </div>
+  <div class="modal-footer">
+      <a href="javascript:;" class="modal-action modal-close waves-effect waves-green btn ">ADD</a>
+      <a href="javascript:;" class="modal-action modal-close waves-effect waves-green btn-flat ">CANCEL</a>
+  </div>
+</div>

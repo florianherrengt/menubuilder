@@ -1,0 +1,26 @@
+{
+  "name": "app",
+  "main": "app.js",
+  "version": "0.0.0",
+  "authors": [
+    "florianherrengt <florian.herrengt@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "~0.2.15",
+    "angular-resource": "~1.4.0",
+    "angular-mocks": "~1.4.0",
+    "angular-material": "~0.9.8",
+    "material-design-icons": "~2.0.0",
+    "trianglify": "~0.2.1",
+    "materialize": "~0.97.0",
+    "jquery-circle-progress": "~1.1.3"
+  }
+}

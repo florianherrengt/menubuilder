@@ -1,0 +1,36 @@
+<ng-include src="'views/header.html'"></ng-include>
+<!-- <p ng-repeat="m in menu">
+    label: {{ m.label }}
+</p> -->
+<!-- <a class="waves-effect waves-light btn">Stuff</a> -->
+<div ng-repeat="m in menu" style="width: 200px; margin: 20px; float: left">
+    <div class="col">
+      <div class="card blue-grey darken-1 valign-wrapper" style="height: 200px">
+        <div class="card-content white-text valign center-align" style="margin-left: auto; margin-right: auto;">
+            <!-- <span class="card-title">{{ m.label }}</span> -->
+            <span class="card-title">4 repas</span> <br>
+          <span class="card-title">1700 kcal</span>
+          <!-- <p>I am a very simp.</p> -->
+        </div>
+        <!-- <div class="card-action">
+          <a href="#">This is a link</a>
+          <a href="#">This is a link</a>
+        </div> -->
+      </div>
+    </div>
+</div>
+<div style="width: 200px; margin: 20px; float: left">
+    <div class="col">
+      <div class="card blue-grey lighten-4 valign-wrapper" style="height: 200px; border-style: dashed; border-width: 10px;">
+        <div class="card-content white-text valign center-align" style="margin-left: auto; margin-right: auto;">
+            <!-- <span class="card-title">{{ m.label }}</span> -->
+          <span class="card-title">+</span>
+          <!-- <p>I am a very simp.</p> -->
+        </div>
+        <!-- <div class="card-action">
+          <a href="#">This is a link</a>
+          <a href="#">This is a link</a>
+        </div> -->
+      </div>
+    </div>
+</div>
