@@ -1,0 +1,43 @@
+.icon-food {
+    border: solid #37474F;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.icon-food-sm {
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+}
+.icon-food-md {
+    border-radius: 40px;
+}
+
+.icon-food-protein {
+    background: #E53935;
+}
+
+.icon-food-carbs {
+    background: #1976D2;
+}
+
+.icon-food-fat {
+    background: #F57C00;
+}
+
+.icon-food-search {
+    position: absolute;
+    top: 10px;
+}
+
+.icon-food-search-proteins {
+    right: 100px;
+}
+
+.icon-food-search-cabs {
+    right: 60px;
+}
+
+.icon-food-search-fat {
+    right: 20px;
+}

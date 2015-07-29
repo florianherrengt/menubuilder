@@ -1,0 +1,55 @@
+  <md-content class="md-padding">
+    <form ng-submit="$event.preventDefault()">
+      <md-autocomplete
+          md-search-text-change="food.searchTextChange()"
+          md-search-text="food.searchText"
+          md-selected-item-change="food.selectedItemChange(item)"
+          md-items="item in food.querySearch()"
+          md-item-text="item.label"
+          md-min-length="3"
+          placeholder="{{ 'FOOD.PLACEHOLDER' | translate }}">
+        <md-item-template>
+            <span md-highlight-text="food.searchText" md-highlight-flags="^i">
+                {{ item.label}}
+            </span>
+        </md-item-template>
+        <md-not-found>
+          No matches found for "{{food.searchText}}".
+        </md-not-found>
+      </md-autocomplete>
+      <br/>
+    </form>
+    <md-input-container md-no-float>
+        <md-icon>
+            <div class="icon-food icon-food-md icon-food-protein" layout="col" layout-align="center center">
+                <span class="icon-food-label">{{ 'PROTEINS.SYMBOL' | translate }}</span>
+            </div>
+        </md-icon>
+        <input ng-change="food.updateKcal()" ng-model="food.nutritionalValue.proteins" type="text" placeholder="{{ 'PROTEINS.TEXT' | translate }}" >
+    </md-input-container>
+    <md-input-container md-no-float>
+        <md-icon>
+            <div class="icon-food icon-food-md icon-food-carbs" layout="col" layout-align="center center">
+                <span class="icon-food-label">{{ 'CARBS.SYMBOL' | translate }}</span>
+            </div>
+        </md-icon>
+        <input ng-change="food.updateKcal()" ng-model="food.nutritionalValue.carbs" type="text" placeholder="{{ 'CARBS.TEXT' | translate }}" >
+    </md-input-container>
+    <md-input-container md-no-float>
+        <md-icon>
+            <div class="icon-food icon-food-md icon-food-fat" layout="col" layout-align="center center">
+                <span class="icon-food-label">{{ 'FAT.SYMBOL' | translate }}</span>
+            </div>
+        </md-icon>
+        <input ng-change="food.updateKcal()" ng-model="food.nutritionalValue.fat" type="text" placeholder="{{ 'FAT.TEXT' | translate }}" >
+    </md-input-container>
+    <md-input-container md-no-float>
+        <md-icon>
+            <div class="icon-food icon-food-md" layout="col" layout-align="center center">
+                <span class="icon-food-label" style="color: black">K</span>
+            </div>
+        </md-icon>
+        <input disabled="disabled" ng-model="food.nutritionalValue.kcal" type="text" placeholder="Kcal" >
+    </md-input-container>
+        <md-button ng-click="food.createFood()" ng-disabled="food.nutritinalValue" class="md-raised">{{ 'ACTIONS.CREATE' | translate }}</md-button>
+  </md-content>

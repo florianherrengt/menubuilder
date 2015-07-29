@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Sat Jun 13 2015 17:45:26 GMT+0100 (BST)
+// Generated on Wed Jul 29 2015 21:03:00 GMT+0100 (BST)
 
 module.exports = function(config) {
   config.set({
@@ -7,21 +7,27 @@ module.exports = function(config) {
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
-
+    plugins: [
+     'karma-jasmine',
+     'karma-babel-preprocessor',
+     'karma-phantomjs-launcher'
+    ],
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: [ 'jasmine' ],
 
 
     // list of files / patterns to load in the browser
     files: [
-      'app/js/lib/angular/angular.js',
-      'app/js/lib/angular-ui-router/release/angular-ui-router.js',
-      'app/js/lib/angular-resource/angular-resource.js',
-      'app/js/services/lb-services.js',
-      'app/js/lib/angular-mocks/angular-mocks.js',
-      'app/js/app.js',
-      'app/js/**/*specs.js'
+        './app/node_modules/angular/angular.js',
+        './node_modules/angular-mocks/angular-mocks.js',
+        './app/node_modules/angular-resource/angular-resource.js',
+        './app/node_modules/angular-new-router/dist/router.es5.js',
+        './app/node_modules/angular-animate/angular-animate.js',
+        './app/node_modules/angular-aria/angular-aria.js',
+        './app/node_modules/angular-material/angular-material.js',
+        './app/node_modules/angular-translate/dist/angular-translate.js',
+        './app/components/**/*.js'
     ],
 
 
@@ -29,24 +35,20 @@ module.exports = function(config) {
     exclude: [
     ],
 
+
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'app/js/app.js': ['coverage']
+      'app/components/**/*.js': [ 'babel' ]
     },
 
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress', 'coverage'],
+    reporters: [ 'progress' ],
 
-  	
-    coverageReporter: {
-      type : 'html',
-      dir : 'coverage/'
-    },
-    
+
     // web server port
     port: 9876,
 
@@ -66,7 +68,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS'],
+    browsers: [ 'PhantomJS' ],
 
 
     // Continuous Integration mode

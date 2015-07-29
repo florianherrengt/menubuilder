@@ -1,44 +1,29 @@
 <!doctype html>
-<html ng-app="menumanager">
-   <head>
-       <style media="screen">
-       body {
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        }
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <link rel="stylesheet" href="./node_modules/angular-material/angular-material.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <link rel="stylesheet" href="./components/food/food.css">
 
-       </style>
-       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Confident</title>
-      <base href="/#" />
-      <link rel="stylesheet" href="js/lib/materialize/dist/css/materialize.css" media="screen" title="no title" charset="utf-8">
-      <!--    <link href="js/lib/angular-material/angular-material.css"></link>-->
-    <!-- //   <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.2.1/trianglify.min.js"></script> -->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!-- <link rel="stylesheet" href="js/lib/angular-material/angular-material.css"/> -->
-      <script src="js/lib/jquery/dist/jquery.js"></script>
-      <script src="js/lib/jquery-circle-progress/dist/circle-progress.js"></script>
-      <script src="js/lib/angular/angular.js"></script>
-      <script src="js/lib/materialize/dist/js/materialize.js"></script>
-    <!-- //   <script src="js/lib/ng-messages/angular-messages.js"></script> -->
-      <script src="js/lib/angular-ui-router/release/angular-ui-router.js"></script>
-      <script src="js/lib/angular-resource/angular-resource.js"></script>
-    <!-- //   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-animate.min.js"></script> -->
-    <!-- //   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-aria.min.js"></script> -->
-    <!-- //   <script src="js/lib/angular-material/angular-material.js"></script> -->
-      <script src="js/services/lb-services.js"></script>
-      <script src="js/app.js"></script>
-      <script src="js/controllers/login.js"></script>
-      <script src="js/controllers/menu.js"></script>
-      <script src="js/controllers/today.js"></script>
-   </head>
-   <body layout="column" layout-fill>
+  <title>Routing</title>
+</head>
+<body ng-app="example" ng-strict-di ng-controller="AppController">
+    <div ng-viewport></div>
 
-      <div ui-view></div>
+  <script src="./node_modules/angular/angular.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-resource.js"></script>
+  <script src="./node_modules/angular-new-router/dist/router.es5.js"></script>
+  <script src="./node_modules/angular-animate/angular-animate.js"></script>
+  <script src="./node_modules/angular-aria/angular-aria.js"></script>
+  <script src="./node_modules/angular-material/angular-material.js"></script>
+  <script src="./node_modules/angular-translate/dist/angular-translate.js"></script>
 
-   </body>
+  <script src="./services/lb-services.js"></script>
+  <script src="./app.js"></script>
+  <script src="./dist/app.js"></script>
+  <!--<script src="./components/welcome/welcome.js"></script>-->
+  <!--<script src="./components/food/food.js"></script>-->
+  <!--<script src="./components/login/login.js"></script>-->
+</body>
 </html>

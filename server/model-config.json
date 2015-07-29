@@ -40,5 +40,9 @@
   "Menu": {
     "dataSource": "db",
     "public": true
+  },
+  "food": {
+    "dataSource": "db",
+    "public": true
   }
 }

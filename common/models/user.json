@@ -16,6 +16,11 @@
       "type": "hasMany",
       "model": "Menu",
       "foreignKey": "ownerId"
+    },
+    "food": {
+      "type": "hasMany",
+      "model": "Menu",
+      "foreignKey": "ownerId"
     }
   },
   "acls": [

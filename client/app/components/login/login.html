@@ -1,0 +1,14 @@
+<div layout="row" layout-align="center center">
+    <md-content layout-padding layout="row" layout-sm="column">
+    <md-input-container>
+      <label>Email</label>
+      <input ng-model="login.user.email" type="email">
+    </md-input-container>
+    <md-input-container>
+      <label>Password</label>
+      <input ng-model="login.user.password" type="password">
+    </md-input-container>
+  </md-content>
+    <md-button ng-click="login.login()" class="md-raised">Login</md-button>
+
+</div>
