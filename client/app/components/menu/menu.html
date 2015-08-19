@@ -1,1 +1,4 @@
-<p>{{ menu.label }}</p>
+<md-content class="md-padding">
+    <p>{{ menu.label }}</p>
+    <search-food seleted-food="menu.menuFn(item)" not-found="menu.onNotFound(item)"></search-food>
+</md-content>

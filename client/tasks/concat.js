@@ -3,8 +3,16 @@ import babel from 'gulp-babel';
 import sourcemaps from 'gulp-sourcemaps';
 import concat from 'gulp-concat';
 
+const src = [ 
+    'app/app.js', 
+    'app/components/**/*.js',
+    'app/directives/**/*.js',
+    '!**/*.test.*'
+];
+
 gulp.task('js', () => {
-    return gulp.src([ 'app/components/**/*.js' ])
+    gulp.watch(src, ['js']);
+    return gulp.src(src)
         .pipe(sourcemaps.init())
         .pipe(babel())
         .pipe(concat('app.js'))
